@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Well Tough Admin | AI Tool Map</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="login-panel" id="loginPanel">
+        <a class="brand admin-brand" href="../index.html" aria-label="Well Tough home">
+          <span class="brand-mark">WT</span>
+          <span>Well Tough Admin</span>
+        </a>
+        <h1>AI Tool Map</h1>
+        <p>Internal catalogue of common business tools, the AI agents attached to them, and the work clients should use them for.</p>
+        <form id="loginForm">
+          <label for="adminPassword">Password</label>
+          <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required>
+          <button class="button primary" type="submit">Log in</button>
+          <p class="login-error" id="loginError" role="alert"></p>
+        </form>
+      </section>
+
+      <section class="admin-app" id="adminApp" hidden>
+        <header class="admin-topbar">
+          <a class="brand" href="../index.html">
+            <span class="brand-mark">WT</span>
+            <span>Well Tough</span>
+          </a>
+          <div class="admin-actions">
+            <a class="small-button ghost" href="index.html">Diagnostic</a>
+            <a class="small-button ghost" href="pricing.html">Tool pricing</a>
+            <button class="small-button" id="printButton" type="button">Print / PDF</button>
+            <button class="small-button ghost" id="logoutButton" type="button">Log out</button>
+          </div>
+        </header>
+
+        <section class="admin-hero">
+          <div>
+            <p class="section-kicker">Internal tool map</p>
+            <h1>Common business tools and their AI agents</h1>
+            <p>
+              Use this during diagnostics to connect the client's existing software estate to practical AI use cases.
+              The aim is to avoid generic AI recommendations and show exactly where AI should sit in daily work.
+            </p>
+          </div>
+          <aside class="client-card">
+            <h3>Recommendation rule</h3>
+            <p>
+              Start with tools the organisation already uses, then add new AI platforms only where the existing stack
+              cannot deliver the workflow, governance or measurement required.
+            </p>
+          </aside>
+        </section>
+
+        <section class="tooling-section">
+          <div class="section-heading">
+            <p class="section-kicker">Workflow mapping</p>
+            <h2>Tool-to-agent catalogue</h2>
+            <p>
+              Filter by function, then use the final column to shape client workshops, training plans and 90-day roadmap actions.
+            </p>
+          </div>
+
+          <div class="tool-map-filters">
+            <label>
+              Search tools, agents or use cases
+              <input id="toolSearch" type="search" placeholder="e.g. Teams, finance, proposal, CRM">
+            </label>
+            <label>
+              Function
+              <select id="functionFilter">
+                <option value="all">All functions</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="service-table">
+            <table class="tool-map-table">
+              <thead>
+                <tr>
+                  <th>Common tool</th>
+                  <th>Associated AI agent</th>
+                  <th>Best-fit organisation / function</th>
+                  <th>What they should use the AI agent to do</th>
+                </tr>
+              </thead>
+              <tbody id="toolMapBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="tools.js"></script>
+  </body>
+</html>

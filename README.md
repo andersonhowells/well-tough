@@ -20,9 +20,11 @@ Static multi-page website for Well Tough, ready for GitHub Pages.
 ├── admin/                  # Internal static admin tools
 │   ├── index.html          # AIRI diagnostic questionnaire
 │   ├── pricing.html        # AI tooling/pricing catalogue
+│   ├── tools.html          # Common tool-to-AI-agent map
 │   ├── admin.css
 │   ├── admin.js
-│   └── pricing.js
+│   ├── pricing.js
+│   └── tools.js
 └── assets/
     ├── css/styles.css
     ├── js/assessment.js
@@ -49,6 +51,12 @@ The internal AI tooling/pricing catalogue is available at:
 
 ```text
 http://localhost:8080/admin/pricing.html
+```
+
+The internal common tool-to-AI-agent map is available at:
+
+```text
+http://localhost:8080/admin/tools.html
 ```
 
 Compatibility redirects are retained at `admin.html` and `admin-pricing.html`.

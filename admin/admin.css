@@ -440,6 +440,70 @@ textarea {
   white-space: nowrap;
 }
 
+.service-table td ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.service-table td li + li {
+  margin-top: 6px;
+}
+
+.tool-map-filters {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(220px, 1fr) minmax(180px, 0.4fr);
+  margin-top: 24px;
+}
+
+.tool-map-filters label {
+  color: var(--ink);
+  display: grid;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tool-map-filters select {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: inherit;
+  padding: 12px 13px;
+  width: 100%;
+}
+
+.tool-map-table td:first-child strong {
+  color: var(--ink);
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.tool-map-table td:nth-child(2) {
+  color: inherit;
+  font-weight: inherit;
+  white-space: normal;
+}
+
+.tool-map-table td:first-child span,
+.tool-map-table .muted {
+  color: var(--muted);
+  display: block;
+  font-size: 14px;
+}
+
+.tool-map-table .agent-pill {
+  background: #f5eee5;
+  color: var(--ink);
+  display: inline-block;
+  font-weight: 800;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+}
+
 .sources-panel {
   margin-top: 28px;
 }
@@ -464,7 +528,8 @@ textarea {
   .score-summary,
   .question-card,
   .pricing-intro,
-  .tooling-grid {
+  .tooling-grid,
+  .tool-map-filters {
     grid-template-columns: 1fr;
   }
 
