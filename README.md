@@ -12,7 +12,11 @@ Static multi-page website for Well Tough, ready for GitHub Pages.
 ├── team.html               # About Well Tough
 ├── assessment.html         # Public AI self-assessment
 ├── contact.html            # Contact form
+├── privacy.html            # Privacy notice
+├── cookies.html            # Cookie policy
 ├── thanks.html             # Contact-form thank-you page
+├── robots.txt              # Search crawler rules
+├── sitemap.xml             # Public sitemap
 ├── admin/                  # Internal static admin tools
 │   ├── index.html          # AIRI diagnostic questionnaire
 │   ├── pricing.html        # AI tooling/pricing catalogue
@@ -70,6 +74,8 @@ When you buy a domain later, add it under the same Pages settings and create a `
 
 ## Notes
 
-- The contact form posts to FormSubmit for `andersonhowells@gmail.com`; first use may require mailbox confirmation.
-- The public company email shown on the About page is `info@wellhard.co.uk`.
+- The contact form posts to FormSubmit for `info@welltough.co.uk`; first use may require mailbox confirmation.
+- The public company email shown on the About and policy pages is `info@welltough.co.uk`.
+- The site currently does not use analytics or marketing cookies, so there is no cookie banner.
+- Canonical URLs and the sitemap currently use the GitHub Pages URL. Replace `https://andersonhowells.github.io/well-tough/` when a custom domain is connected.
 - The hero image was generated for this site and is stored at `assets/images/hero-ai-adoption.png`.
