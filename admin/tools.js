@@ -171,6 +171,162 @@ const toolMap = [
     ]
   },
   {
+    tool: "Jira",
+    category: "Project management",
+    stack: "Atlassian",
+    agent: "Atlassian Rovo / Atlassian Intelligence",
+    fit: "Software teams, product teams, service teams, operations, PMOs and any organisation managing structured work through tickets.",
+    actions: [
+      "Summarise epics, issues, blockers and sprint progress for standups or leadership updates.",
+      "Create or refine tickets from meeting notes, support themes, product ideas or customer feedback.",
+      "Identify stale work, duplicate issues, missing acceptance criteria and risks to delivery."
+    ]
+  },
+  {
+    tool: "Confluence",
+    category: "Knowledge management",
+    stack: "Atlassian",
+    agent: "Atlassian Rovo / Atlassian Intelligence",
+    fit: "Organisations using Confluence for policies, project documentation, technical knowledge, onboarding or operating procedures.",
+    actions: [
+      "Find and summarise relevant knowledge across spaces, projects and connected tools.",
+      "Turn rough notes into decision records, SOPs, project briefs and stakeholder updates.",
+      "Keep pages current by surfacing outdated content, missing owners and related Jira work."
+    ]
+  },
+  {
+    tool: "Jira Service Management",
+    category: "Customer service",
+    stack: "Atlassian",
+    agent: "Atlassian Rovo / virtual service agents",
+    fit: "IT, operations, internal service desks, customer support and managed-service teams handling repeatable requests.",
+    actions: [
+      "Triage requests, summarise incidents and suggest knowledge-base answers.",
+      "Create incident updates and escalation notes from ticket history.",
+      "Analyse recurring service themes and convert them into knowledge articles or automation candidates."
+    ]
+  },
+  {
+    tool: "Trello",
+    category: "Project management",
+    stack: "Atlassian",
+    agent: "Atlassian Intelligence / Rovo-connected workflows",
+    fit: "Small teams, marketing, operations, founders and lightweight project groups that need simple visual task control.",
+    actions: [
+      "Turn brainstorms, emails or meeting notes into cards, checklists and owners.",
+      "Summarise board status and highlight overdue or blocked work.",
+      "Create repeatable board templates for campaigns, onboarding and delivery processes."
+    ]
+  },
+  {
+    tool: "Loom",
+    category: "Training and knowledge",
+    stack: "Atlassian",
+    agent: "Loom AI / Rovo-connected video knowledge",
+    fit: "Teams that rely on walkthroughs, product demos, training videos, handovers or asynchronous updates.",
+    actions: [
+      "Generate titles, summaries, chapters and action points from recorded videos.",
+      "Convert process walkthroughs into SOPs, onboarding material or support articles.",
+      "Make video knowledge discoverable alongside Jira, Confluence and project context."
+    ]
+  },
+  {
+    tool: "GitHub",
+    category: "Software delivery",
+    stack: "Developer tools",
+    agent: "GitHub Copilot / Rovo connector",
+    fit: "Software teams, data teams and technical operations groups managing code, issues and pull requests.",
+    actions: [
+      "Support code drafting, test generation, documentation and pull-request summaries.",
+      "Connect commits and pull requests back to Jira tickets or product requirements.",
+      "Use governed AI assistance for repetitive development tasks while keeping review gates in place."
+    ]
+  },
+  {
+    tool: "GitLab",
+    category: "Software delivery",
+    stack: "Developer tools",
+    agent: "GitLab Duo / Rovo connector",
+    fit: "Engineering teams running source control, CI/CD, security checks and delivery workflows in GitLab.",
+    actions: [
+      "Explain code, summarise merge requests and support test or pipeline troubleshooting.",
+      "Draft issue updates and release notes from delivery activity.",
+      "Identify where engineering bottlenecks are caused by unclear requirements, review delays or broken pipelines."
+    ]
+  },
+  {
+    tool: "Azure DevOps",
+    category: "Software delivery",
+    stack: "Microsoft developer tools",
+    agent: "GitHub Copilot / Microsoft Copilot plus Rovo connector",
+    fit: "Microsoft-heavy development teams using boards, repos, pipelines and release management.",
+    actions: [
+      "Summarise work items, sprint progress, build failures and release risks.",
+      "Connect backlog items to code changes, test outcomes and deployment notes.",
+      "Create delivery updates for product owners and leadership without manual status chasing."
+    ]
+  },
+  {
+    tool: "Figma",
+    category: "Design and product",
+    stack: "Design tools",
+    agent: "Figma AI / Rovo connector",
+    fit: "Product, UX, marketing and digital teams moving from design ideas to buildable work.",
+    actions: [
+      "Summarise design intent, variants and stakeholder feedback.",
+      "Turn approved designs into Jira tasks, acceptance criteria and implementation notes.",
+      "Keep product, design and engineering aligned around the latest version and decisions."
+    ]
+  },
+  {
+    tool: "Miro / Lucid",
+    category: "Workshops and process mapping",
+    stack: "Whiteboarding tools",
+    agent: "Miro AI / Lucid AI / Rovo connectors",
+    fit: "Consulting, operations, product, transformation and leadership teams running workshops or process mapping.",
+    actions: [
+      "Cluster workshop notes into themes, risks, opportunities and decisions.",
+      "Convert process maps into action plans, Jira tickets or improvement backlogs.",
+      "Create clearer workshop outputs without losing the human discussion behind them."
+    ]
+  },
+  {
+    tool: "Smartsheet",
+    category: "Project management",
+    stack: "Work management",
+    agent: "Smartsheet AI / Rovo connector",
+    fit: "PMOs, operations, construction, implementation and multi-site teams managing structured plans and dependencies.",
+    actions: [
+      "Summarise project health, overdue work, dependency risk and resource pressure.",
+      "Generate executive project updates from live sheets and reports.",
+      "Identify repeatable planning templates and automation opportunities."
+    ]
+  },
+  {
+    tool: "DocuSign",
+    category: "Documents",
+    stack: "Agreement management",
+    agent: "DocuSign AI / Rovo connector",
+    fit: "Sales, legal, procurement, property, HR and professional services teams handling repeated contracts or approvals.",
+    actions: [
+      "Summarise agreement status, bottlenecks and missing approvals.",
+      "Extract obligations, renewal dates and handover actions from signed documents.",
+      "Standardise contract preparation, review routing and post-signature follow-up."
+    ]
+  },
+  {
+    tool: "Dropbox / Box",
+    category: "Knowledge management",
+    stack: "File storage",
+    agent: "Native AI search plus Rovo connectors",
+    fit: "Organisations with large shared drives, legacy document stores, client folders or mixed Microsoft/Google/Atlassian estates.",
+    actions: [
+      "Find relevant documents across file stores without relying on folder memory.",
+      "Summarise client folders, project histories and document packs before meetings.",
+      "Identify duplicates, outdated documents and sensitive-content governance risks."
+    ]
+  },
+  {
     tool: "Zoom",
     category: "Collaboration",
     stack: "Zoom",
