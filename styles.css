@@ -675,28 +675,57 @@ meter::-webkit-meter-optimum-value {
   font-size: 28px;
 }
 
-.result-block dl {
+.result-block dl,
+.roi-list {
   display: grid;
   gap: 12px;
   margin: 0;
 }
 
-.result-block dl div {
+.result-block dl div,
+.roi-item > div {
   display: flex;
   gap: 16px;
   justify-content: space-between;
 }
 
-.result-block dt,
+.roi-item {
+  border: 1px solid var(--line);
+  outline: none;
+  padding: 12px;
+}
+
+.roi-item:hover,
+.roi-item:focus {
+  background: var(--paper);
+  border-color: var(--moss);
+}
+
+.roi-item span,
 .result-block p {
   color: var(--muted);
 }
 
-.result-block dd {
+.roi-item strong {
   color: var(--ink);
   font-weight: 800;
   margin: 0;
   text-align: right;
+}
+
+.roi-item p {
+  max-height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 180ms ease, margin-top 180ms ease, opacity 180ms ease;
+}
+
+.roi-item:hover p,
+.roi-item:focus p {
+  max-height: 180px;
+  margin-top: 8px;
+  opacity: 1;
 }
 
 .muted-block {
