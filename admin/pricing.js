@@ -63,6 +63,36 @@ const tools = [
     notes: "Best where the client lacks a clean source of truth and needs structure before automation."
   },
   {
+    category: "Atlassian ecosystem",
+    name: "Jira, Confluence and Rovo",
+    vendor: "Atlassian",
+    cost: "Rovo is available with eligible Standard, Premium or Enterprise Cloud plans for Jira, Confluence and Jira Service Management; verify the client's product tier and Rovo credit allowance.",
+    bestFor: "Product, software, service, operations and PMO teams already running work through Jira, Confluence or Jira Service Management.",
+    wtOffer: "Atlassian AI readiness review, Rovo use-case design, Jira/Confluence workflow mapping, governance and team training.",
+    wtPrice: "£1,500-£5,500",
+    notes: "Good fit where the client needs AI to connect work, knowledge and decisions rather than sit as a separate chatbot."
+  },
+  {
+    category: "Atlassian ecosystem",
+    name: "Rovo Dev",
+    vendor: "Atlassian",
+    cost: "$20/developer/month for Rovo Dev Standard, with included credits and additional usage billed by credit. Verify live terms.",
+    bestFor: "Software development teams wanting AI support for code planning, generation, review and repetitive engineering work.",
+    wtOffer: "Developer workflow assessment, pilot group setup, review gates, usage policy, code-risk controls and benefit tracking.",
+    wtPrice: "£2,000-£6,500",
+    notes: "Position only where engineering leadership will own adoption and code review standards remain explicit."
+  },
+  {
+    category: "Atlassian ecosystem",
+    name: "Trello with Atlassian AI/Rovo-connected workflows",
+    vendor: "Atlassian",
+    cost: "Trello has free and paid plans; AI/Rovo availability depends on the wider Atlassian subscription and rollout. Verify before quoting.",
+    bestFor: "Small teams that need lightweight task management, campaign boards, onboarding checklists or simple operational control.",
+    wtOffer: "Board redesign, template creation, workflow automation, action capture and operating rhythm setup.",
+    wtPrice: "£750-£2,500",
+    notes: "Often a practical first step where Jira would be too heavy for the client."
+  },
+  {
     category: "Meeting intelligence",
     name: "Fireflies.ai",
     vendor: "Fireflies",
@@ -71,6 +101,16 @@ const tools = [
     wtOffer: "Consent wording, meeting policy, CRM/task integration, management reporting.",
     wtPrice: "£950-£2,500",
     notes: "High immediate value for sales, recruitment, account management and leadership meetings."
+  },
+  {
+    category: "Meeting intelligence",
+    name: "Loom Business + AI",
+    vendor: "Atlassian / Loom",
+    cost: "Business $18/user/month; Business + AI $24/user/month. Enterprise via sales. Verify billing route via Loom vs Atlassian.",
+    bestFor: "Training, onboarding, asynchronous updates, product walkthroughs, process capture and client handovers.",
+    wtOffer: "Video knowledge workflow, recording policy, AI summary templates, Confluence/Jira handoff and onboarding library.",
+    wtPrice: "£950-£3,000",
+    notes: "Useful where knowledge is trapped in calls, demos or repeated verbal explanations."
   },
   {
     category: "Automation",
@@ -93,6 +133,36 @@ const tools = [
     notes: "Often preferable where workflows need clearer visual mapping or more complex branching."
   },
   {
+    category: "Project management",
+    name: "Smartsheet AI and add-ons",
+    vendor: "Smartsheet",
+    cost: "Pro and Business paid plans, with Enterprise and Advanced Work Management via sales; add-ons such as Dynamic View and Data Shuttle are separately priced. Verify region and plan.",
+    bestFor: "PMOs, operations, construction, implementation teams and multi-site organisations needing structured project control.",
+    wtOffer: "Portfolio reporting review, AI summary workflow, sheet/dashboard design, automation and governance setup.",
+    wtPrice: "£1,500-£5,500",
+    notes: "Good where spreadsheet-like working needs stronger workflow, reporting and accountability."
+  },
+  {
+    category: "Workshops and process mapping",
+    name: "Miro AI",
+    vendor: "Miro",
+    cost: "Free, Starter, Business and Enterprise plans; AI credits vary by plan and additional credits may be purchased. Verify plan and credit model.",
+    bestFor: "Workshops, process mapping, product discovery, transformation, service design and collaborative planning.",
+    wtOffer: "Workshop design, process-map templates, AI synthesis workflow, action backlog and governance of workshop outputs.",
+    wtPrice: "£750-£3,000",
+    notes: "Best used to turn messy workshop input into prioritised, auditable actions."
+  },
+  {
+    category: "Workshops and process mapping",
+    name: "Lucid AI",
+    vendor: "Lucid",
+    cost: "Individual, Team and Enterprise pricing varies by Lucid product and region; verify live price before quote.",
+    bestFor: "Technical diagrams, process architecture, systems mapping, operating models and transformation design.",
+    wtOffer: "Current-state/future-state mapping, AI-assisted diagram standards, process library and operating model documentation.",
+    wtPrice: "£950-£3,500",
+    notes: "Useful where the diagnostic needs clearer systems, process or data-flow evidence."
+  },
+  {
     category: "CRM and sales",
     name: "HubSpot AI / Salesforce AI",
     vendor: "HubSpot / Salesforce",
@@ -103,6 +173,36 @@ const tools = [
     notes: "Only recommend after CRM hygiene is assessed; poor CRM data will weaken AI value."
   },
   {
+    category: "Software delivery",
+    name: "GitHub with Copilot",
+    vendor: "GitHub",
+    cost: "GitHub Team $4/user/month and Enterprise $21/user/month; Copilot is a separate/additional AI add-on or bundled trial depending on plan. Verify live Copilot terms.",
+    bestFor: "Software teams managing code, issues, pull requests, security and documentation in GitHub.",
+    wtOffer: "Copilot adoption pilot, coding standards, review policy, issue-to-PR workflow, security guardrails and productivity tracking.",
+    wtPrice: "£2,000-£6,500",
+    notes: "Do not sell as replacement for engineering review; sell as controlled acceleration around existing delivery standards."
+  },
+  {
+    category: "Software delivery",
+    name: "GitLab Duo Agent Platform",
+    vendor: "GitLab",
+    cost: "GitLab Premium $29/user/month includes Duo credits; Ultimate custom pricing includes higher credits. Additional Duo credits are usage-based. Verify plan and credits.",
+    bestFor: "DevSecOps teams using GitLab for source control, CI/CD, security and delivery management.",
+    wtOffer: "Duo pilot, SDLC workflow assessment, merge-request controls, pipeline automation review and value measurement.",
+    wtPrice: "£2,000-£7,500",
+    notes: "Strong fit where AI can improve delivery flow, test generation, pipeline troubleshooting and security remediation."
+  },
+  {
+    category: "Software delivery",
+    name: "Azure DevOps with GitHub/Microsoft Copilot",
+    vendor: "Microsoft / GitHub",
+    cost: "Azure DevOps pricing depends on Basic users, pipelines, test plans and GitHub/Microsoft Copilot licensing. Verify tenant setup.",
+    bestFor: "Microsoft-heavy engineering teams using boards, repos, pipelines and release management.",
+    wtOffer: "Backlog-to-release workflow mapping, Copilot pilot, delivery reporting, policy controls and engineering adoption plan.",
+    wtPrice: "£2,000-£7,500",
+    notes: "Most valuable where delivery data is already structured enough to support reporting and automation."
+  },
+  {
     category: "Creative and marketing",
     name: "Canva, Adobe Firefly, image/video tools",
     vendor: "Various",
@@ -111,6 +211,46 @@ const tools = [
     wtOffer: "Brand-safe content workflow, approval process, prompt library and rights guidance.",
     wtPrice: "£750-£2,500",
     notes: "Governance matters: brand quality, copyright, client approvals and disclosure rules."
+  },
+  {
+    category: "Design and product",
+    name: "Figma AI",
+    vendor: "Figma",
+    cost: "Professional full seat $16/month, Organization full seat $55/month, Enterprise full seat $90/month; AI credits included by plan with add-ons available.",
+    bestFor: "Product, UX, digital, marketing and design teams moving from idea to prototype to build.",
+    wtOffer: "Design-to-delivery workflow, AI prototyping guardrails, Jira handoff, design-system governance and team training.",
+    wtPrice: "£1,250-£4,500",
+    notes: "Good where design output needs faster iteration without losing brand or product-control discipline."
+  },
+  {
+    category: "Documents and agreements",
+    name: "DocuSign AI / agreement management",
+    vendor: "DocuSign",
+    cost: "Plan and AI feature pricing varies by country, volume and agreement product. Verify current eSignature and IAM pricing before quote.",
+    bestFor: "Sales, legal, HR, property, procurement and professional services teams handling repeated agreements.",
+    wtOffer: "Agreement workflow review, obligation extraction process, approval routing, renewal tracking and document governance.",
+    wtPrice: "£1,250-£4,500",
+    notes: "Useful where contract admin, renewal leakage or approval delays create measurable cost."
+  },
+  {
+    category: "Knowledge workspace",
+    name: "Dropbox Dash / Dropbox AI",
+    vendor: "Dropbox",
+    cost: "Dropbox Standard from about €12/user/month annually in the UK/EU view; Advanced about €18/user/month; Dash/AI availability may vary. Verify region and plan.",
+    bestFor: "Teams with large shared folders, client document packs, creative files or legacy file-store knowledge.",
+    wtOffer: "File-store audit, AI search pilot, permissions review, folder taxonomy and document lifecycle controls.",
+    wtPrice: "£1,250-£4,500",
+    notes: "Start with governance: AI search is only useful if the underlying permissions and document hygiene are acceptable."
+  },
+  {
+    category: "Knowledge workspace",
+    name: "Box AI / Box Enterprise Advanced",
+    vendor: "Box",
+    cost: "Business Starter from $5/user/month; Enterprise Plus shown at $50/user/month annually; Enterprise Advanced with AI agents via sales. Verify plan and AI units.",
+    bestFor: "Regulated or document-heavy teams needing secure content management, e-signatures, metadata and AI document workflows.",
+    wtOffer: "Content governance review, Box AI use-case design, metadata extraction pilot, agent workflow and compliance controls.",
+    wtPrice: "£2,000-£7,500",
+    notes: "Best for document-heavy workflows where governance, retention and access control matter as much as productivity."
   },
   {
     category: "Custom internal assistant",
