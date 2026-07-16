@@ -304,6 +304,75 @@ function renderTools() {
   `).join("");
 }
 
+function formatDate(value) {
+  if (!value) return "Not checked yet";
+  return new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  }).format(new Date(value));
+}
+
+function statusLabel(status) {
+  if (status === "changed") return "Review";
+  if (status === "error") return "Error";
+  if (status === "baseline") return "Baseline";
+  if (status === "ok") return "OK";
+  return "Pending";
+}
+
+function renderPricingMonitor(monitor) {
+  const changed = monitor.sources.filter((source) => source.status === "changed").length;
+  const errors = monitor.sources.filter((source) => source.status === "error").length;
+  const pending = monitor.sources.filter((source) => source.status === "pending").length;
+  const summary = changed
+    ? `${changed} source${changed === 1 ? "" : "s"} need review`
+    : errors
+      ? `${errors} source${errors === 1 ? "" : "s"} could not be checked`
+      : pending
+        ? "Awaiting first automated check"
+        : "No pricing-page changes detected";
+
+  document.getElementById("pricingMonitor").innerHTML = `
+    <div class="monitor-summary">
+      <strong>${summary}</strong>
+      <span>Last run: ${formatDate(monitor.updatedAt)}</span>
+    </div>
+    <div class="service-table monitor-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Last checked</th>
+            <th>Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${monitor.sources.map((source) => `
+            <tr>
+              <td><a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a></td>
+              <td><span class="monitor-status ${source.status}">${statusLabel(source.status)}</span></td>
+              <td>${formatDate(source.lastChecked)}</td>
+              <td>${source.error || source.summary}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+async function loadPricingMonitor() {
+  const panel = document.getElementById("pricingMonitor");
+  try {
+    const response = await fetch("pricing-monitor.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    renderPricingMonitor(await response.json());
+  } catch (error) {
+    panel.innerHTML = `<p>Pricing monitor unavailable: ${error.message}. Check vendor links manually.</p>`;
+  }
+}
+
 document.getElementById("loginForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const password = document.getElementById("adminPassword").value;
@@ -326,6 +395,7 @@ document.getElementById("logoutButton").addEventListener("click", () => {
 document.getElementById("printButton").addEventListener("click", () => window.print());
 
 renderTools();
+loadPricingMonitor();
 
 if (sessionStorage.getItem(SESSION_KEY) === "true") {
   showAdmin();

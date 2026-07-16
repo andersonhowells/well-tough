@@ -1,0 +1,134 @@
+{
+  "updatedAt": null,
+  "note": "Automated daily checks flag likely vendor pricing page changes. Always verify vendor prices before quoting.",
+  "sources": [
+    {
+      "name": "ChatGPT pricing",
+      "url": "https://chatgpt.com/pricing/",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Google Workspace pricing",
+      "url": "https://workspace.google.com/pricing.html",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Claude pricing",
+      "url": "https://claude.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Notion pricing",
+      "url": "https://www.notion.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Zapier pricing",
+      "url": "https://zapier.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Fireflies pricing",
+      "url": "https://fireflies.ai/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Atlassian Rovo licensing",
+      "url": "https://www.atlassian.com/licensing/rovo",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "GitHub pricing",
+      "url": "https://github.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "GitLab pricing",
+      "url": "https://about.gitlab.com/pricing/",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Figma pricing",
+      "url": "https://www.figma.com/pricing/",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Miro pricing",
+      "url": "https://miro.com/pricing/",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Smartsheet pricing",
+      "url": "https://www.smartsheet.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Loom pricing",
+      "url": "https://www.loom.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Dropbox pricing",
+      "url": "https://www.dropbox.com/plans",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "Box pricing",
+      "url": "https://www.box.com/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    },
+    {
+      "name": "DocuSign pricing",
+      "url": "https://www.docusign.com/products/electronic-signature/pricing",
+      "status": "pending",
+      "lastChecked": null,
+      "lastChanged": null,
+      "summary": "Awaiting first automated check."
+    }
+  ]
+}

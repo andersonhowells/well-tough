@@ -523,6 +523,62 @@ textarea {
   text-decoration: underline;
 }
 
+.pricing-monitor {
+  margin: 22px 0;
+}
+
+.monitor-summary {
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.monitor-summary strong {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.monitor-summary span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.monitor-table table {
+  min-width: 980px;
+}
+
+.monitor-status {
+  background: var(--sage);
+  color: var(--ink);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 6px 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.monitor-status.changed {
+  background: #f5eee5;
+  color: #8d3f15;
+}
+
+.monitor-status.error {
+  background: #f3d9d1;
+  color: #8f2418;
+}
+
+.monitor-status.pending {
+  background: var(--line);
+}
+
 @media (max-width: 980px) {
   .admin-hero,
   .score-summary,
