@@ -12,6 +12,26 @@ python3 -m http.server 8080
 
 Then visit `http://localhost:8080`.
 
+The internal diagnostic area is available at:
+
+```text
+http://localhost:8080/admin.html
+```
+
+The internal AI tooling/pricing catalogue is available at:
+
+```text
+http://localhost:8080/admin-pricing.html
+```
+
+Temporary admin password:
+
+```text
+welltough-admin
+```
+
+This is only a static-site gate for early prototyping. It is not suitable for protecting confidential client data once published publicly.
+
 ## GitHub Pages setup
 
 1. Create a new GitHub repository, for example `well-tough`.
