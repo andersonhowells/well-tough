@@ -176,7 +176,13 @@ function calculate() {
 }
 
 renderQuestions();
-calculate();
 
-document.getElementById("assessmentForm").addEventListener("input", calculate);
-document.getElementById("assessmentForm").addEventListener("change", calculate);
+document.getElementById("assessmentForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  calculate();
+  document.getElementById("assessmentResults").hidden = false;
+  document.getElementById("assessmentResults").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
