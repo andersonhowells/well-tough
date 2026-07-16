@@ -665,6 +665,11 @@ meter::-webkit-meter-optimum-value {
   margin: 10px 0 0;
 }
 
+.assessment-score .opportunity-line {
+  color: var(--muted);
+  font-weight: 400;
+}
+
 .result-block {
   border-bottom: 1px solid var(--line);
   margin-bottom: 22px;

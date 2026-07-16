@@ -107,17 +107,25 @@ function band(score) {
   return "Early stage: start with controlled quick wins";
 }
 
+function opportunityLine(score) {
+  const gap = 100 - score;
+  if (gap >= 65) return "Improvement opportunity: high. Foundations need building before value can scale.";
+  if (gap >= 45) return "Improvement opportunity: strong. There is likely value trapped in workflows and inconsistent adoption.";
+  if (gap >= 25) return "Improvement opportunity: moderate. The focus is scaling, governance and measurement.";
+  return "Improvement opportunity: targeted. The focus is optimisation and repeatability.";
+}
+
 function narrative(score, annualValue, netBenefit) {
   if (score >= 76) {
-    return `You appear to have enough structure to scale AI adoption deliberately. The opportunity is to improve measurement, extend governance and convert successful workflows into repeatable operating practice. Indicative net benefit: ${money(netBenefit)}.`;
+    return `You appear to have relatively strong foundations. The Well Tough opportunity is likely to come from scaling what already works, improving measurement, strengthening governance and converting good local practice into repeatable operating capability. Indicative year-one net benefit after intervention: ${money(netBenefit)}.`;
   }
   if (score >= 56) {
-    return `You likely have promising foundations, but value may be inconsistent across teams. A controlled diagnostic should identify the highest-value workflows, formalise governance and prioritise training. Indicative net benefit: ${money(netBenefit)}.`;
+    return `You likely have promising foundations, but value may be inconsistent across teams. A Well Tough diagnostic should identify the highest-value workflows, formalise governance, prioritise training and turn scattered usage into measurable adoption. Indicative year-one net benefit after intervention: ${money(netBenefit)}.`;
   }
   if (score >= 36) {
-    return `There is likely useful ROI available, but unmanaged adoption could create risk or wasted effort. Start with a small number of high-friction workflows, basic AI policy, and role-based training. Estimated annual time value before investment: ${money(annualValue)}.`;
+    return `There is likely significant untapped value, but unmanaged adoption could create risk or wasted effort. Well Tough would start by baselining maturity, selecting high-friction workflows, introducing governance and training users around measured use cases. Potential annual value after intervention: ${money(annualValue)}.`;
   }
-  return `You are probably early in AI adoption. The best starting point is not a large rollout: it is a controlled baseline, clear rules, staff confidence and two or three practical quick wins. Estimated annual time value before investment: ${money(annualValue)}.`;
+  return `You are probably early in AI adoption, which means current savings may be low but the improvement opportunity may be material. The best starting point is not a large tool rollout: it is a controlled Well Tough baseline, clear rules, staff confidence and two or three practical quick wins. Potential annual value after intervention: ${money(annualValue)}.`;
 }
 
 function renderQuestions() {
@@ -155,9 +163,11 @@ function calculate() {
   const sector = document.getElementById("sector").value;
 
   const hourlyCost = salary / (46 * 37.5);
-  const readinessFactor = 0.16 + (score / 100) * 0.18;
-  const controlledAdoptionFactor = 1.18;
-  const annualValue = phaseUsers * adminHours * 46 * hourlyCost * readinessFactor * controlledAdoptionFactor * sectorMultipliers[sector];
+  const maturityGap = Math.max(0.15, (100 - score) / 100);
+  const readinessToCapture = 0.55 + (score / 100) * 0.35;
+  const wellToughFrameworkFactor = 1.22;
+  const realisticAutomationShare = 0.22 + maturityGap * 0.18;
+  const annualValue = phaseUsers * adminHours * 46 * hourlyCost * realisticAutomationShare * readinessToCapture * wellToughFrameworkFactor * sectorMultipliers[sector];
   const diagnosticCost = 2495;
   const trainingAndTooling = phaseUsers * 420;
   const governanceSetup = 1250;
@@ -168,6 +178,7 @@ function calculate() {
 
   document.getElementById("assessmentScore").textContent = score;
   document.getElementById("assessmentBand").textContent = band(score);
+  document.getElementById("opportunityLine").textContent = opportunityLine(score);
   document.getElementById("annualValue").textContent = money(annualValue);
   document.getElementById("yearOneCost").textContent = money(yearOneCost);
   document.getElementById("netBenefit").textContent = `${netBenefit >= 0 ? "" : "-"}${money(Math.abs(netBenefit))}`;
