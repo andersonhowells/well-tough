@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Self-Assessment | Well Tough</title>
+    <meta name="description" content="Take a short AI resilience self-assessment and receive an indicative AI readiness score and ROI estimate.">
+    <meta property="og:title" content="AI Self-Assessment | Well Tough">
+    <meta property="og:description" content="A short self-assessment for SMBs considering controlled, practical AI adoption.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-ai-adoption.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Well Tough home">
+        <span class="brand-mark">WT</span>
+        <span>Well Tough</span>
+      </a>
+      <nav>
+        <a href="method.html">Method</a>
+        <a href="offer.html">Offer</a>
+        <a href="team.html">Team</a>
+        <a href="assessment.html" aria-current="page">Assessment</a>
+        <a class="nav-cta" href="mailto:hello@welltough.co.uk">Talk to us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="section-kicker">Short assessment</p>
+        <h1>Where is your business on the AI adoption scale?</h1>
+        <p>
+          Answer a few practical questions to get an indicative AI Resilience score, maturity band and
+          estimated annual ROI from adopting AI in a controlled, procedural and tutored way.
+        </p>
+      </section>
+
+      <section class="section assessment-layout">
+        <form class="assessment-form" id="assessmentForm">
+          <section class="assessment-card">
+            <p class="section-kicker">Company profile</p>
+            <div class="form-grid">
+              <label>
+                Company name
+                <input id="companyName" type="text" placeholder="Optional">
+              </label>
+              <label>
+                Sector
+                <select id="sector">
+                  <option value="professional">Professional services</option>
+                  <option value="accountancy">Accountancy</option>
+                  <option value="legal">Legal</option>
+                  <option value="recruitment">Recruitment</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="education">Education</option>
+                  <option value="property">Property / estate agency</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+              <label>
+                Number of employees
+                <input id="employees" type="number" min="1" max="5000" value="25">
+              </label>
+              <label>
+                Average fully-loaded staff cost per year
+                <select id="salary">
+                  <option value="30000">£30,000</option>
+                  <option value="40000" selected>£40,000</option>
+                  <option value="50000">£50,000</option>
+                  <option value="65000">£65,000</option>
+                  <option value="80000">£80,000</option>
+                </select>
+              </label>
+              <label>
+                Average admin / repetitive work per employee per week
+                <select id="adminHours">
+                  <option value="2">1-2 hours</option>
+                  <option value="4" selected>3-5 hours</option>
+                  <option value="7">6-8 hours</option>
+                  <option value="10">9+ hours</option>
+                </select>
+              </label>
+              <label>
+                How many people would realistically use AI in phase one?
+                <input id="phaseUsers" type="number" min="1" max="5000" value="10">
+              </label>
+            </div>
+          </section>
+
+          <section class="assessment-card">
+            <p class="section-kicker">AI resilience questions</p>
+            <div id="assessmentQuestions" class="assessment-questions"></div>
+          </section>
+        </form>
+
+        <aside class="assessment-results" aria-live="polite">
+          <div class="assessment-score">
+            <span>Indicative AIRI score</span>
+            <strong id="assessmentScore">0</strong>
+            <em>/100</em>
+            <p id="assessmentBand">Complete the assessment</p>
+          </div>
+          <div class="result-block">
+            <h2>Estimated ROI</h2>
+            <dl>
+              <div>
+                <dt>Estimated annual time value</dt>
+                <dd id="annualValue">£0</dd>
+              </div>
+              <div>
+                <dt>Indicative year-one investment</dt>
+                <dd id="yearOneCost">£0</dd>
+              </div>
+              <div>
+                <dt>Indicative net year-one benefit</dt>
+                <dd id="netBenefit">£0</dd>
+              </div>
+              <div>
+                <dt>Estimated payback</dt>
+                <dd id="payback">-</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="result-block">
+            <h2>What this suggests</h2>
+            <p id="assessmentNarrative">
+              Your result will appear as you answer the questions.
+            </p>
+          </div>
+          <div class="result-block muted-block">
+            <h2>Assumptions</h2>
+            <p>
+              This is a directional estimate, not a financial guarantee. It assumes measured AI adoption,
+              role-based training, governance controls, and workflow redesign rather than unmanaged tool usage.
+            </p>
+          </div>
+          <a class="button primary" href="mailto:hello@welltough.co.uk?subject=AI%20self-assessment%20follow-up">Discuss my result</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <a class="quiet-admin-link" href="admin.html" aria-label="Admin section">Well Tough — resilience, built in.</a>
+      <a href="mailto:hello@welltough.co.uk">hello@welltough.co.uk</a>
+    </footer>
+    <script src="assessment.js"></script>
+  </body>
+</html>
