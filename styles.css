@@ -794,6 +794,47 @@ meter::-webkit-meter-optimum-value {
   display: none;
 }
 
+.company-profile {
+  border-top: 1px solid var(--line);
+}
+
+.company-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 34px;
+}
+
+.company-grid article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  min-height: 230px;
+  padding: 24px;
+}
+
+.company-grid span {
+  color: var(--copper);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.company-grid strong {
+  color: var(--ink);
+  display: block;
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.company-grid p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 .sectors {
   border-top: 1px solid var(--line);
 }
@@ -958,6 +999,7 @@ footer .quiet-admin-link {
   .assessment-layout,
   .form-grid,
   .contact-layout,
+  .company-grid,
   .team-grid {
     grid-template-columns: 1fr;
   }
