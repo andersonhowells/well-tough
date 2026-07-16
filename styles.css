@@ -333,15 +333,55 @@ h3 {
 }
 
 .price-panel ul {
-  columns: 2;
-  list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
-.price-panel li {
-  break-inside: avoid;
-  margin-bottom: 10px;
+.deliverable-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+
+.deliverable-list li {
+  background: rgba(247, 245, 239, 0.06);
+  border: 1px solid rgba(247, 245, 239, 0.18);
+  cursor: default;
+  min-height: 64px;
+  outline: none;
+  padding: 13px 14px;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.deliverable-list li:hover,
+.deliverable-list li:focus {
+  background: rgba(247, 245, 239, 0.12);
+  border-color: rgba(184, 111, 49, 0.72);
+}
+
+.deliverable-list li span {
+  color: var(--paper);
+  font-size: 15px;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: none;
+}
+
+.deliverable-list li p {
+  color: rgba(247, 245, 239, 0.74);
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 180ms ease, margin-top 180ms ease, opacity 180ms ease;
+}
+
+.deliverable-list li:hover p,
+.deliverable-list li:focus p {
+  max-height: 150px;
+  margin-top: 8px;
+  opacity: 1;
 }
 
 .process div {
@@ -588,8 +628,8 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .price-panel ul {
-    columns: 1;
+  .deliverable-list {
+    grid-template-columns: 1fr;
   }
 
   .score-bars div {
