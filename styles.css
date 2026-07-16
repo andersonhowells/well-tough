@@ -739,6 +739,59 @@ meter::-webkit-meter-optimum-value {
   padding: 16px;
 }
 
+.contact-layout {
+  align-items: start;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+}
+
+.contact-form,
+.contact-aside {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-form > label {
+  color: var(--ink);
+  display: grid;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-form textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-aside h2 {
+  font-size: clamp(30px, 3.6vw, 46px);
+}
+
+.contact-aside li {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.hidden-field {
+  display: none;
+}
+
 .sectors {
   border-top: 1px solid var(--line);
 }
@@ -902,6 +955,7 @@ footer .quiet-admin-link {
   .detail-grid,
   .assessment-layout,
   .form-grid,
+  .contact-layout,
   .team-grid {
     grid-template-columns: 1fr;
   }
