@@ -175,10 +175,28 @@ function calculate() {
   document.getElementById("assessmentNarrative").textContent = narrative(score, annualValue, netBenefit);
 }
 
+function syncPhaseUsers() {
+  const employeesInput = document.getElementById("employees");
+  const phaseUsersInput = document.getElementById("phaseUsers");
+  const employees = Math.max(1, Number(employeesInput.value) || 1);
+  const phaseUsers = Math.max(1, Number(phaseUsersInput.value) || 1);
+
+  phaseUsersInput.max = String(employees);
+
+  if (phaseUsers > employees) {
+    phaseUsersInput.value = employees;
+  }
+}
+
 renderQuestions();
+syncPhaseUsers();
+
+document.getElementById("employees").addEventListener("input", syncPhaseUsers);
+document.getElementById("phaseUsers").addEventListener("input", syncPhaseUsers);
 
 document.getElementById("assessmentForm").addEventListener("submit", (event) => {
   event.preventDefault();
+  syncPhaseUsers();
   calculate();
   document.getElementById("assessmentResults").hidden = false;
   document.getElementById("assessmentResults").scrollIntoView({
