@@ -75,6 +75,10 @@ nav {
   font-weight: 700;
 }
 
+nav a[aria-current="page"] {
+  color: var(--copper);
+}
+
 .nav-cta {
   border: 1px solid var(--ink);
   padding: 8px 12px;
@@ -182,6 +186,14 @@ h3 {
   color: var(--paper);
 }
 
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 38px auto 0;
+  max-width: var(--max);
+}
+
 .proof-band {
   background: var(--surface);
   border-bottom: 1px solid var(--line);
@@ -209,6 +221,22 @@ h3 {
   color: var(--muted);
   display: block;
   max-width: 330px;
+}
+
+.page-hero {
+  background: var(--charcoal);
+  color: var(--paper);
+  padding: clamp(140px, 18vw, 190px) clamp(22px, 7vw, 96px) clamp(70px, 9vw, 110px);
+}
+
+.page-hero h1 {
+  max-width: 920px;
+}
+
+.page-hero p:not(.section-kicker) {
+  color: rgba(247, 245, 239, 0.82);
+  font-size: clamp(18px, 2vw, 23px);
+  max-width: 760px;
 }
 
 .section {
@@ -283,6 +311,7 @@ h3 {
 .feature-grid p,
 .dimension-grid p,
 .team-grid p,
+.detail-grid p,
 .process p {
   color: var(--muted);
   margin-bottom: 0;
@@ -474,6 +503,27 @@ meter::-webkit-meter-optimum-value {
   padding: 24px;
 }
 
+.detail-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.detail-grid article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  min-height: 260px;
+  padding: 30px;
+}
+
+.detail-grid article:last-child:nth-child(odd) {
+  grid-column: span 2;
+}
+
+.detail-grid h2 {
+  font-size: clamp(28px, 3.4vw, 44px);
+}
+
 .sectors {
   border-top: 1px solid var(--line);
 }
@@ -557,6 +607,10 @@ meter::-webkit-meter-optimum-value {
   padding: 30px;
 }
 
+.team-grid article p + p {
+  margin-top: 16px;
+}
+
 .role {
   color: var(--copper) !important;
   font-weight: 800;
@@ -630,8 +684,13 @@ footer .quiet-admin-link {
   .dimension-grid,
   .sector-grid,
   .tier-grid,
+  .detail-grid,
   .team-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-grid article:last-child:nth-child(odd) {
+    grid-column: auto;
   }
 
   .deliverable-list {
