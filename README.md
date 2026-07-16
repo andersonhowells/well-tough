@@ -1,6 +1,29 @@
 # Well Tough website
 
-Static one-page website for Well Tough, ready for GitHub Pages.
+Static multi-page website for Well Tough, ready for GitHub Pages.
+
+## Structure
+
+```text
+.
+├── index.html              # Home
+├── offer.html              # Diagnostic and retainer offer
+├── method.html             # Five-dimension method
+├── team.html               # About Well Tough
+├── assessment.html         # Public AI self-assessment
+├── contact.html            # Contact form
+├── thanks.html             # Contact-form thank-you page
+├── admin/                  # Internal static admin tools
+│   ├── index.html          # AIRI diagnostic questionnaire
+│   ├── pricing.html        # AI tooling/pricing catalogue
+│   ├── admin.css
+│   ├── admin.js
+│   └── pricing.js
+└── assets/
+    ├── css/styles.css
+    ├── js/assessment.js
+    └── images/hero-ai-adoption.png
+```
 
 ## Local preview
 
@@ -15,14 +38,16 @@ Then visit `http://localhost:8080`.
 The internal diagnostic area is available at:
 
 ```text
-http://localhost:8080/admin.html
+http://localhost:8080/admin/
 ```
 
 The internal AI tooling/pricing catalogue is available at:
 
 ```text
-http://localhost:8080/admin-pricing.html
+http://localhost:8080/admin/pricing.html
 ```
+
+Compatibility redirects are retained at `admin.html` and `admin-pricing.html`.
 
 Temporary admin password:
 
@@ -45,6 +70,6 @@ When you buy a domain later, add it under the same Pages settings and create a `
 
 ## Notes
 
-- The contact links currently use `hello@welltough.co.uk` as a placeholder.
-- Replace that email before launch if you use a different address.
-- The hero image was generated for this site and is stored at `assets/hero-ai-adoption.png`.
+- The contact form posts to FormSubmit for `andersonhowells@gmail.com`; first use may require mailbox confirmation.
+- The public company email shown on the About page is `info@wellhard.co.uk`.
+- The hero image was generated for this site and is stored at `assets/images/hero-ai-adoption.png`.

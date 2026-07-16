@@ -101,7 +101,7 @@ nav a[aria-current="page"] {
 }
 
 .hero-media {
-  background-image: url("assets/hero-ai-adoption.png");
+  background-image: url("../images/hero-ai-adoption.png");
   background-position: center;
   background-size: cover;
   inset: 0;

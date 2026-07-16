@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Well Tough Admin | AI Resilience Diagnostic</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="login-panel" id="loginPanel">
+        <a class="brand admin-brand" href="../index.html" aria-label="Well Tough home">
+          <span class="brand-mark">WT</span>
+          <span>Well Tough Admin</span>
+        </a>
+        <h1>AI Resilience Diagnostic</h1>
+        <p>
+          Internal questionnaire and scoring model for the Well Tough AI Resilience Index.
+        </p>
+        <form id="loginForm">
+          <label for="adminPassword">Password</label>
+          <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required>
+          <button class="button primary" type="submit">Log in</button>
+          <p class="login-error" id="loginError" role="alert"></p>
+        </form>
+        <p class="admin-note">
+          Static-site gate only. Do not store confidential client responses here once the site is public.
+        </p>
+      </section>
+
+      <section class="admin-app" id="adminApp" hidden>
+        <header class="admin-topbar">
+          <a class="brand" href="../index.html">
+            <span class="brand-mark">WT</span>
+            <span>Well Tough</span>
+          </a>
+          <div class="admin-actions">
+            <a class="small-button ghost" href="pricing.html">Tool pricing</a>
+            <button class="small-button" id="printButton" type="button">Print / PDF</button>
+            <button class="small-button" id="exportButton" type="button">Export JSON</button>
+            <button class="small-button ghost" id="logoutButton" type="button">Log out</button>
+          </div>
+        </header>
+
+        <section class="admin-hero">
+          <div>
+            <p class="section-kicker">Internal diagnostic</p>
+            <h1>Well Tough AI Resilience Index</h1>
+            <p>
+              Score each question from 0 to 4. Each of the five dimensions contributes 20 points,
+              giving an overall AIRI score out of 100.
+            </p>
+          </div>
+          <aside class="client-card">
+            <label>
+              Client name
+              <input id="clientName" type="text" placeholder="Company name">
+            </label>
+            <label>
+              Sector
+              <input id="clientSector" type="text" placeholder="e.g. Accountancy, manufacturing">
+            </label>
+            <label>
+              Assessor
+              <input id="assessorName" type="text" placeholder="Andrew / Andy">
+            </label>
+          </aside>
+        </section>
+
+        <section class="score-summary" aria-label="Score summary">
+          <div class="score-total admin-score">
+            <span>AIRI score</span>
+            <strong id="totalScore">0</strong>
+            <em>/100</em>
+            <p id="scoreBand">Not yet assessed</p>
+          </div>
+          <div class="admin-score-bars" id="dimensionScores"></div>
+        </section>
+
+        <section class="questionnaire" id="questionnaire"></section>
+
+        <section class="recommendations">
+          <div class="section-heading">
+            <p class="section-kicker">Priority actions</p>
+            <h2>Suggested next-grade moves</h2>
+            <p>
+              These are generated from the lowest-scoring answers and should be refined during the executive workshop.
+            </p>
+          </div>
+          <div id="priorityActions" class="priority-list"></div>
+        </section>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>
