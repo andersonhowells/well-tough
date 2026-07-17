@@ -1,134 +1,176 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-07-17T15:48:54.365Z",
   "note": "Automated daily checks flag likely vendor pricing page changes. Always verify vendor prices before quoting.",
   "sources": [
     {
       "name": "ChatGPT pricing",
       "url": "https://chatgpt.com/pricing/",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "error",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Automated check failed; verify manually.",
+      "error": "HTTP 403"
     },
     {
       "name": "Google Workspace pricing",
       "url": "https://workspace.google.com/pricing.html",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $4.90, $7.00, $7, $14.00, $14, $11.00, $22.00, $11...",
+      "hash": "343ad0de550facdb5d661389080677b27624006cb3fa1e80ecf01721cd8c2036",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Claude pricing",
       "url": "https://claude.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $0, $17, $200, $20, $100, $25, $125, $20/seat...",
+      "hash": "a24fa523187ef15037133dbdf10ef56f6c7885becef01e981acd1ab6cb692085",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Notion pricing",
       "url": "https://www.notion.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $0, $10, $20, $8/month, $10/month",
+      "hash": "c037e7b7e07af5934a0351c506811cf1c6511dbcc392779fc4aeb591855c5c6c",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Zapier pricing",
       "url": "https://zapier.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $0 /month, $19.99 /month, $69 /month, $400, $33.33 /month, $160, $13.33 /month, $800...",
+      "hash": "9328d4bd25aa6b83f14ab67ca9ad04c767541bfa08ea21548b4b493e1e5e4ba3",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Fireflies pricing",
       "url": "https://fireflies.ai/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $0, $18, $10, $29, $19, $39",
+      "hash": "732f6449d29953cdfefcb28f91e04a8c3c60de30c4d3dcdd8aae3cd828d670c3",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Atlassian Rovo licensing",
       "url": "https://www.atlassian.com/licensing/rovo",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $20, $0.01",
+      "hash": "fcd268ef53699bc77188f14168194876391939ab0ec23592c3d6945937d52efd",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "GitHub pricing",
       "url": "https://github.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $ 0, $ 4, $0.18, $0.07, $ 21, $5, $0",
+      "hash": "6748ace37b22e8af4ace685720e8e3be4be946933e623460cf09caa6eea4096f",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "GitLab pricing",
       "url": "https://about.gitlab.com/pricing/",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $ 0, $ 29, $12, $24, $15/user, $ 1, $ 15, $ 10...",
+      "hash": "fb058532dd77a1997b3a13142e02265d94e73cf818391d3d0f7a831c3e1ecc51",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Figma pricing",
       "url": "https://www.figma.com/pricing/",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $16 /mo, $12 /mo, $3 /mo, $55 /mo, $25 /mo, $5 /mo, $90 /mo, $35 /mo",
+      "hash": "3684a0e52f4406625398dfee391381be36dfe12414a8fe0e74d0258263666e93",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Miro pricing",
       "url": "https://miro.com/pricing/",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $ 0, $ 8 /month, $ 20 /month, $1,000, $500",
+      "hash": "bfd0e6f0bcfe8edc64bef2a32170d1f1863a65e5060e43059e83d67cbfd70d66",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Smartsheet pricing",
       "url": "https://www.smartsheet.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $ 12, $ 17, $ 16, £ 10, $ 20, $ 24, $ 35, $ 33...",
+      "hash": "b406472e61b25015315c477b8f4ed3bcc451190c2616525f38be32f8018fd16e",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Loom pricing",
       "url": "https://www.loom.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $0, $18, $24",
+      "hash": "b853e21c9d320a2b2d4b6131ebffea75860ac34deddf34acf72d36c3ef853b67",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Dropbox pricing",
       "url": "https://www.dropbox.com/plans",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "baseline",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Price-like values found: $9.99 / month, $15 / user, $24 / user",
+      "hash": "69cc0dfcd096507679bc60bdd6e32980be1d1ecb736f8c9ef988651b81076f18",
+      "previousHash": null,
+      "error": null
     },
     {
       "name": "Box pricing",
       "url": "https://www.box.com/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "error",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Automated check failed; verify manually.",
+      "error": "HTTP 403"
     },
     {
       "name": "DocuSign pricing",
       "url": "https://www.docusign.com/products/electronic-signature/pricing",
-      "status": "pending",
-      "lastChecked": null,
+      "status": "error",
+      "lastChecked": "2026-07-17T15:48:54.365Z",
       "lastChanged": null,
-      "summary": "Awaiting first automated check."
+      "summary": "Automated check failed; verify manually.",
+      "error": "HTTP 404"
     }
   ]
 }
