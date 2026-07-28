@@ -21,11 +21,13 @@ Static multi-page website for Well Tough, ready for GitHub Pages.
 │   └── check-pricing-updates.mjs
 ├── admin/                  # Internal static admin tools
 │   ├── index.html          # AIRI diagnostic questionnaire
+│   ├── framework.html      # Comprehensive AI adoption delivery framework
 │   ├── pricing.html        # AI tooling/pricing catalogue
 │   ├── pricing-monitor.json # Automated pricing-page status
 │   ├── tools.html          # Common tool-to-AI-agent map
 │   ├── admin.css
 │   ├── admin.js
+│   ├── framework.js
 │   ├── pricing.js
 │   └── tools.js
 └── assets/
@@ -54,6 +56,12 @@ The internal AI tooling/pricing catalogue is available at:
 
 ```text
 http://localhost:8080/admin/pricing.html
+```
+
+The internal end-to-end AI adoption framework is available at:
+
+```text
+http://localhost:8080/admin/framework.html
 ```
 
 Vendor pricing pages are checked by a scheduled GitHub Action every 24 hours. The checker updates
